@@ -3,13 +3,6 @@ class Box implements RayCollider
   PVector pos, size;
   int col;
   
-  Box(PVector pos, PVector size, int col)
-  {
-    this.pos = pos;
-    this.size = size;
-    this.col = col;
-  }
-  
   int colorAt(PVector coord)
   {
     return col;
@@ -21,7 +14,7 @@ class Box implements RayCollider
     (
       (checkPos.x >= pos.x && checkPos.x <= pos.x + size.x)
         &&
-      (checkPos.y >= pos.y && checkPos.y <= pos.y + size.y)
+      (checkPos.y >= pos.x && checkPos.y <= pos.y + size.y)
         &&
       (checkPos.z >= pos.z && checkPos.z <= pos.z + size.z)
     );
